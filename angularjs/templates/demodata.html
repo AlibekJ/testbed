@@ -1,0 +1,11 @@
+<div ng-init="
+(routeParams && routeParams.id ? {} : window.history.back());
+demodata = TheM.demodata[routeParams.id];">
+  <h2>Demo data element</h2>
+  <div>
+    This one shows a single element
+  </div>
+  <br />
+  <div>Name: {{demodata.name}}</div>
+  <div>Id: {{demodata.AWSMDataId}}</div>
+</div>

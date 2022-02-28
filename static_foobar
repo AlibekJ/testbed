@@ -1,0 +1,9 @@
+{
+  "name": "states",
+  "isPublic": true,
+  "ttlMsec": 155520000000,
+  "isWorthSaving": false,
+  "payload": {
+    "foo": "bar"
+  }
+}

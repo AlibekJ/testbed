@@ -1,0 +1,19 @@
+{
+  "name": "testbed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "python3 serve.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlibekJ/testbed.git"
+  },
+  "author": "alibek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlibekJ/testbed/issues"
+  },
+  "homepage": "https://github.com/AlibekJ/testbed#readme"
+}

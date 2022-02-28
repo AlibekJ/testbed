@@ -1,0 +1,21 @@
+<div ng-if="TheM.isReady">
+  <h2>All the demo data</h2>
+
+  <div>
+    This page shows all the demo data elements
+  </div>
+  <br />
+
+  <div ng-repeat="demodata in TheM.demodata">
+
+    <div>Name: {{demodata.name}}</div>
+    <div>Id: {{demodata.AWSMDataId}}</div>
+    <br />
+    <div ng-click="go('demodata/'+demodata.AWSMDataId);" style="cursor: pointer;">View →</div>
+    <br />
+    <br />
+    <br />
+  </div>
+
+
+</div>

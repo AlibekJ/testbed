@@ -1,0 +1,34 @@
+{
+  "demodata": [
+    {
+      "AWSMDataId": "000",
+      "typeId": "demodata",
+      "typeName": "demodata0",
+      "name": "demodata0",
+      "dtsOpened": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "dtsUpdated": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "isHidden": false,
+      "isActive": true
+    },
+    {
+      "AWSMDataId": "001",
+      "typeId": "demodata",
+      "typeName": "demodata1",
+      "name": "demodata1",
+      "dtsOpened": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "dtsUpdated": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "isHidden": false,
+      "isActive": true
+    },
+    {
+      "AWSMDataId": "002",
+      "typeId": "demodata",
+      "typeName": "demodata2",
+      "name": "demodata2",
+      "dtsOpened": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "dtsUpdated": "Sat Feb 26 2022 18:36:07 GMT-0500",
+      "isHidden": false,
+      "isActive": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head xmlns:ng="http://angularjs.org" id="ng-app" lang="en">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' * 'unsafe-inline'  127.0.0.1:8083 localhost:8083 ws://localhost:4000 http://temporarytestbed.s3-website-us-east-1.amazonaws.com;">
+
+	<title>Demo</title>
+
+	<script type="application/javascript" src="lib/lz-string.min.js"></script>
+	<script type="application/javascript" src="lib/moment.min.js"></script>
+
+	<script type="module" src="./demo.js"></script>
+
+	<style>
+		html {
+			color: rgb(211, 211, 211);
+			background-color: rgb(29, 28, 28);
+		}
+
+		i {
+			font-style: normal;
+			font-family: monospace;
+			background-color: #2b2b2b;
+		}
+	</style>
+
+	<script>
+		var TheM;
+	</script>
+</head>
+
+
+<body>
+	<h1>Basic demo</h1>
+	<p>
+		Open your browser console, the app is accessible via global <i>TheM</i> object.
+
+		<i>TheM.demodata</i> will fetch and return an array of some data.
+	</p>
+
+	<a href="./angularjs/demo.html" style="color: rgb(211, 211, 211);">AngularJs 1.7 demo</a>
+
+</body>
+
+</html>
