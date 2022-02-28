@@ -16,14 +16,7 @@ TheM = new ClassTheM({
 
 
 (async () => {
-  console.time("a");
-
-
-  TheM.on("app ready", () => {
-
-  });
-
-
+  
 
 
   await TheM.doInit("common demodata statics");
