@@ -84,10 +84,7 @@ theApp.controller("GeneralController", function ($window, $scope, $routeParams, 
 
 
   $scope.$on('$routeChangeSuccess', function ($event, next, current) { });
-
-  $scope.echo = function (given) { //used for debug
-    console.log(given);
-  }
+ 
 
   let temp = {};
 

@@ -10,7 +10,7 @@ export async function doInit(TheM) {
     let _dtsUpdateNext = new Date("1978-10-15");
     let _timeoutIsScheduledToSave = false;
     let _isReady = false; //module is ready only after having loaded the data from the local storage or after having it fetched from the server
-
+    let _ticker = 0;
 
     TheM.config.demodata = TheM.config.demodata || {};
     const _TTL_RETRY_MS = TheM.config.demodata.TTL_RETRY_MS || 30 * 1000;
@@ -117,7 +117,7 @@ export async function doInit(TheM) {
 
           TheM.common.doCall("GET", "demodata.json", {}, function (data) {
 
-           
+
             TheM.common.fixDts(data);
 
             //now remove those demodata which are NOT present in the server's reply
@@ -226,19 +226,31 @@ export async function doInit(TheM) {
       }
     });
 
-      
- 
 
 
- 
+    Object.defineProperty(_demodata, "ticker", {
+      configurable: false,
+      enumerable: false,
+      get: function () {
+        return _ticker;
+      }
+    });
+
+
+    setInterval(() => {
+      _ticker++;
+      TheM.newEvent("demodata refreshed");
+    }, 1000);
+
+
 
     TheM.on(["demodata pushed"], data => { //server has sent a socket message 
       if (!data || !data.detail || !data.detail.payload || !data.detail.payload.demodata || data.detail.payload.demodata.length < 1) return undefined;
       _demodata.doDigest(data.detail.payload.demodata);
     });
 
-     
-    
+
+
 
     TheM.on("mobile app resume", () => {
       let a = (new Date()).valueOf();
@@ -253,7 +265,7 @@ export async function doInit(TheM) {
       _demodata.doSave({});
     });
 
-    
+
 
     TheM.on("logged in", () => {
       _demodata.doLoad()
